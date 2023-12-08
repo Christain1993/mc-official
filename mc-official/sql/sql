@@ -1,0 +1,40 @@
+CREATE TABLE `products` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `type_id` bigint DEFAULT NULL,
+  `product_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `keywords` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `material` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `standard` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `diameter` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `length` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `surface` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `technology` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `price_terms` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `delivery` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `detection` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `big_photos` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `detection_photos` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `packing_shipping` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `packing_shipping_photos` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `company_profile` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `company_profile_photos` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `certificate` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `certificate_photos` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `creator` bigint DEFAULT NULL,
+  `updater` bigint DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `type` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `type_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `creator` bigint DEFAULT NULL,
+  `updater` bigint DEFAULT NULL,
+  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
