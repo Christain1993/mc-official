@@ -14,4 +14,20 @@ public class CommonResult<T> implements Serializable {
 
     private String msg;
 
+    public CommonResult<T>  success() {
+        return success("success");
+    }
+
+    public CommonResult<T> success(String message) {
+        CommonResult<T> commonResult = new CommonResult<>();
+        commonResult.setCode(200);
+        commonResult.setMsg(message);
+        return commonResult;
+    }
+    public CommonResult<T> success(T data) {
+        CommonResult<T> success = success();
+        success.setData(data);
+        return success;
+    }
+
 }
